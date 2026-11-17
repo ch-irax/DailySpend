@@ -1,4 +1,4 @@
-# DailySpend
+# DailySpend - PWA
 
 A little space to keep track of where your money goes.
 
