@@ -1,4 +1,4 @@
-# DailySpend
+# DailySpend - PWA
 
 A little space to keep track of where your money goes.
 
@@ -6,3 +6,4 @@ DailySpend is a premium, mobile-first personal expense journal. Records are save
 
 ## More to add...
 
+## Live link :- https://dailyspend-two.vercel.app/
