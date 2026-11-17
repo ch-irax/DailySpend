@@ -12,10 +12,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "strict": true,
-    "paths": {
-      "@/components/ui/*": ["./src/components/UI/*"],
-      "@/*": ["./src/*"]
-    },
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true

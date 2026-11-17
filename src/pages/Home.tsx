@@ -1,12 +1,12 @@
 import { useNavigate } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
-import { LiquidMetalButton } from '@/components/ui/liquid-metal'
+import { Plus } from 'lucide-react'
 import { useExpenses } from '../hooks/useExpenses'
 import { greeting } from '../utils/date'
 import { SummaryCard } from '../components/Dashboard/SummaryCard'
 import { MonthBars } from '../components/Dashboard/MonthBars'
 import { ExpenseCard } from '../components/Expense/ExpenseCard'
 import { EmptyState } from '../components/UI/EmptyState'
+import { Button } from '../components/UI/Button'
 import { SyncBadge } from '../components/Navigation/SyncBadge'
 import { Card } from '../components/UI/Card'
 
@@ -42,18 +42,9 @@ export function HomePage() {
         currency={settings.currency}
       />
 
-      <LiquidMetalButton
-        fullWidth
-        size="lg"
-        icon={<ArrowRight className="w-5 h-5" />}
-        metalConfig={{
-          colorBack: '#3b82f6',
-          colorTint: '#93c5fd',
-        }}
-        onClick={() => navigate('/add')}
-      >
+      <Button className="w-full" icon={<Plus className="size-5" />} onClick={() => navigate('/add')}>
         Add Expense
-      </LiquidMetalButton>
+      </Button>
 
       {expenses.length === 0 ? (
         <EmptyState onAdd={() => navigate('/add')} />

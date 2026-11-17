@@ -1,6 +1,5 @@
 import { NavLink, useNavigate } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
-import { LiquidMetalButton } from '@/components/ui/liquid-metal'
+import { Plus } from 'lucide-react'
 
 const links = [
   { to: '/', label: 'Home', end: true },
@@ -34,18 +33,14 @@ export function TopNav() {
               {link.label}
             </NavLink>
           ))}
-          <LiquidMetalButton
-            size="sm"
-            className="ml-3"
-            icon={<ArrowRight className="w-4 h-4" />}
-            metalConfig={{
-              colorBack: '#3b82f6',
-              colorTint: '#93c5fd',
-            }}
+          <button
+            type="button"
             onClick={() => navigate('/add')}
+            className="ml-3 inline-flex h-10 items-center gap-2 rounded-full bg-rose px-4 text-sm font-medium text-white shadow-xs transition-all duration-150 hover:bg-[#c97b80] hover:shadow-[var(--shadow-soft)] active:scale-98"
           >
+            <Plus className="size-4" />
             Add Expense
-          </LiquidMetalButton>
+          </button>
         </nav>
       </div>
     </header>
