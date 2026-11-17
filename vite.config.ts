@@ -24,6 +24,24 @@ export default defineConfig({
         categories: ['finance', 'lifestyle'],
         icons: [
           {
+            src: '/icons/icon-192.png',
+            sizes: '192x192',
+            type: 'image/png',
+            purpose: 'any',
+          },
+          {
+            src: '/icons/icon-512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any',
+          },
+          {
+            src: '/icons/icon-maskable.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable',
+          },
+          {
             src: '/icons/icon-192.svg',
             sizes: '192x192',
             type: 'image/svg+xml',
@@ -34,12 +52,6 @@ export default defineConfig({
             sizes: '512x512',
             type: 'image/svg+xml',
             purpose: 'any',
-          },
-          {
-            src: '/icons/icon-maskable.svg',
-            sizes: '512x512',
-            type: 'image/svg+xml',
-            purpose: 'maskable',
           },
         ],
       },
