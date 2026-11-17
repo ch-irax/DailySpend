@@ -33,7 +33,17 @@ const dist = path.resolve(__dirname, '../dist')
 
 app.use(
   cors({
-    origin: env.clientOrigin,
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true)
+      if (
+        origin === env.clientOrigin ||
+        origin.endsWith('.vercel.app') ||
+        origin.includes('localhost')
+      ) {
+        return callback(null, true)
+      }
+      return callback(null, true)
+    },
     credentials: true,
   }),
 )

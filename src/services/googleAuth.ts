@@ -1,5 +1,5 @@
 import type { GoogleAccount } from '../types/expense'
-import { api } from './api'
+import { api, API_BASE } from './api'
 
 export async function fetchGoogleStatus(): Promise<{
   configured: boolean
@@ -19,7 +19,7 @@ export async function fetchGoogleStatus(): Promise<{
 }
 
 export function startGoogleConnect() {
-  window.location.href = '/api/auth/google/start'
+  window.location.href = `${API_BASE}/api/auth/google/start`
 }
 
 export async function disconnectGoogle() {

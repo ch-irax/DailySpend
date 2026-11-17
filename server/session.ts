@@ -43,10 +43,11 @@ export function decrypt<T>(token: string, secret: string): T {
 }
 
 function cookieOptions(maxAge: number, secure: boolean) {
+  const isProd = secure || process.env.NODE_ENV === 'production'
   return {
     httpOnly: true,
-    secure,
-    sameSite: 'lax' as const,
+    secure: isProd,
+    sameSite: (isProd ? 'none' : 'lax') as 'none' | 'lax',
     path: '/',
     maxAge,
   }
